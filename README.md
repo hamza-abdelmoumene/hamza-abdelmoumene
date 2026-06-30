@@ -1,76 +1,55 @@
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=7AA2F7&center=true&vCenter=true&width=800&lines=Abdelmoumene+Hamza+Ayoub;Computer+Science+Student+at+ESI+Algiers;Machine+Learning+and+Applied+Data+Science" alt="banner" width="100%" />
-
-<br>
-
-<p>
-  <a href="https://www.esi.dz/"><img src="https://img.shields.io/badge/ESI%20Algiers-Computer%20Science-7AA2F7?style=flat-square&labelColor=1A1B26" /></a>
-  <img src="https://komarev.com/ghpvc/?username=hamza-abdelmoumene&style=flat-square&color=7AA2F7&label=profile%20views" />
-</p>
-
-<br>
-
-<h3 align="center">About</h3>
+  <img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=7AA2F7&center=true&vCenter=true&width=800&lines=Abdelmoumene+Hamza+Ayoub;Computer+Science+Student+at+ESI+Algiers;Machine+Learning+%26+Applied+Data+Science" alt="banner" width="100%" />
+</div>
 
 <p align="center">
-I am a computer science student at ESI Algiers, focused on machine learning and applied data science. My priority is building rigorous foundations — a dependable data workflow — and applying them to real datasets. I am most interested in the process that takes raw, unstructured data and turns it into defensible decisions.
+  <a href="https://www.esi.dz/"><img src="https://img.shields.io/badge/ESI%20Algiers-Computer%20Science-1A1B26?style=flat-square&logoColor=7AA2F7" alt="ESI Algiers" /></a>
+  <a href="mailto:ph_abdelmoumene@esi.dz"><img src="https://img.shields.io/badge/Academic-ph__abdelmoumene@esi.dz-1A1B26?style=flat-square&logo=gmail&logoColor=7AA2F7" alt="Academic Email" /></a>
+  <a href="mailto:hamzaayoub.abdelmoumene@gmail.com"><img src="https://img.shields.io/badge/Personal-hamzaayoub.abdelmoumene@gmail.com-1A1B26?style=flat-square&logo=gmail&logoColor=7AA2F7" alt="Personal Email" /></a>
 </p>
 
-<p align="center">
-Focused on machine learning, grounded in its mathematical foundations.<br>
-Experienced taking data from raw to analysis- and model-ready formats.<br>
-Solid background in algorithms and data structures.<br>
-Linux-based development environment, with an emphasis on understanding system internals.
-</p>
+---
+
+### About
+
+I'm a Computer Science student at ESI Algiers studying machine learning and data science. I love taking raw data and turning it into clear, reliable insights that help make better decisions.
+
+- **Focus:** Machine learning, data pipelines, and building efficient CLI tools.
+- **Skills:** Algorithms, data structures, and data engineering.
+- **Environment:** Linux-based development and system internals.
+- **Currently Advancing Into:** Data manipulation and visualization using `pandas` and `matplotlib`.
+
+---
+
+### Technical Stack
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-1A1B26?style=flat-square&logo=python&logoColor=7AA2F7" alt="Python" />
+  <img src="https://img.shields.io/badge/C-1A1B26?style=flat-square&logo=c&logoColor=7AA2F7" alt="C" />
+  <img src="https://img.shields.io/badge/NumPy-1A1B26?style=flat-square&logo=numpy&logoColor=7AA2F7" alt="NumPy" />
+  <img src="https://img.shields.io/badge/pandas-1A1B26?style=flat-square&logo=pandas&logoColor=7AA2F7" alt="pandas" />
+  <img src="https://img.shields.io/badge/scikit--learn-1A1B26?style=flat-square&logo=scikit-learn&logoColor=7AA2F7" alt="scikit-learn" />
+  <img src="https://img.shields.io/badge/Jupyter-1A1B26?style=flat-square&logo=jupyter&logoColor=7AA2F7" alt="Jupyter" />
+  <img src="https://img.shields.io/badge/Linux-1A1B26?style=flat-square&logo=linux&logoColor=7AA2F7" alt="Linux" />
+  <img src="https://img.shields.io/badge/Git-1A1B26?style=flat-square&logo=git&logoColor=7AA2F7" alt="Git" />
+</div>
+
+---
+
+### Contribution Activity
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com/?user=hamza-abdelmoumene&hide_border=true&theme=tokyonight&background=1A1B26" alt="GitHub Streak" />
+</div>
 
 <br>
 
-<h3 align="center">Technical Stack</h3>
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
-  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
-</p>
-
-<p>
-  <sub>Currently advancing into: scikit-learn, model evaluation</sub>
-</p>
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=hamza-abdelmoumene&theme=tokyo-night&hide_border=true&area=true&color=7AA2F7&line=BB9AF7&point=7DCFFF&bg_color=1A1B26" width="100%" alt="Activity Graph" />
+</div>
 
 <br>
 
-<h3 align="center">GitHub Statistics</h3>
-
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=hamza-abdelmoumene&show_icons=true&count_private=true&hide_border=true&theme=tokyonight" width="49%" />
-  <img src="https://streak-stats.demolab.com/?user=hamza-abdelmoumene&hide_border=true&theme=tokyonight" width="49%" />
-</p>
-<p>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hamza-abdelmoumene&layout=compact&hide_border=true&theme=tokyonight&langs_count=6" width="99%" />
-</p>
-
-<br>
-
-<h3 align="center">Contribution Activity</h3>
-
-<p>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=hamza-abdelmoumene&theme=tokyo-night&hide_border=true&area=true&color=7AA2F7&line=BB9AF7&point=7DCFFF" width="100%" />
-</p>
-<p>
-  <img src="https://raw.githubusercontent.com/hamza-abdelmoumene/hamza-abdelmoumene/output/github-snake-tokyonight.gif" width="100%" alt="contribution snake animation" />
-</p>
-
-<br>
-
-<h3 align="center">Contact</h3>
-
-<p>
-  <a href="mailto:ph_abdelmoumene@esi.dz"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
-</p>
-
+<div align="center">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/hamza-abdelmoumene/hamza-abdelmoumene/output/github-snake-tokyonight.gif" width="100%">
 </div>
