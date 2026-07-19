@@ -18,12 +18,15 @@ jobs:
       contents: write
 
     steps:
-      - name: Generate snake images
+      - name: Generate snake images (aged-paper palette)
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Two paper stocks (transparent bg) to match the hero banner + ledger.
+          # dots run empty-paper -> pale sepia -> oxblood-espresso; snake is oxblood ink.
           outputs: |
-            dist/github-snake.svg?palette=github-dark&color_snake=#22d3ee&color_dots=#161b22,#0e7490,#22d3ee,#7c3aed,#a78bfa
+            dist/snake-vellum.svg?color_snake=%239a4436&color_dots=%23cbbfa6,%23cbb185,%23be9450,%2395622c,%236e3a20
+            dist/snake-bond.svg?color_snake=%239c4436&color_dots=%23dbd1b8,%23d6c08f,%23c4994f,%2399652d,%23732f22
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
