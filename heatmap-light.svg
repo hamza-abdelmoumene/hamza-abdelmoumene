@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="304" viewBox="0 0 1180 304" fill="none" role="img" aria-label="163 contributions in the last year">
-<title>163 contributions in the last year — bond ledger</title>
+<title>163 contributions in the last year — light ledger</title>
 <defs>
       <clipPath id="cardClip"><rect x="6" y="6" width="1168" height="292" rx="8"/></clipPath>
-      <linearGradient id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
+      <linearGradient color-interpolation="sRGB" id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
         <stop offset="0" stop-color="#E4DBC7"/><stop offset="1" stop-color="#D8CEB6"/>
       </linearGradient>
-      <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+      <filter id="grain" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
         <feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.85 0" result="a"/>
         <feFlood flood-color="#2A1B08" result="c"/><feComposite in="c" in2="a" operator="in"/></filter>
-      <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <filter id="cardShadow" color-interpolation-filters="sRGB" x="-10%" y="-10%" width="120%" height="120%">
         <feDropShadow dx="0" dy="5" stdDeviation="14" flood-color="#352B1A" flood-opacity="0.12"/></filter>
-      <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <linearGradient color-interpolation="sRGB" id="sheen" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0" stop-color="#9C4436" stop-opacity="0"/>
         <stop offset="0.5" stop-color="#9C4436" stop-opacity="0.10"/>
         <stop offset="1" stop-color="#9C4436" stop-opacity="0"/></linearGradient>

@@ -26,4 +26,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution ledger [skip ci]"
-          file_pattern: "data/contributions.json heatmap-vellum.svg heatmap-bond.svg"
+          file_pattern: "data/contributions.json heatmap-dark.svg heatmap-light.svg"

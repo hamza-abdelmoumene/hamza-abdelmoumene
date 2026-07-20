@@ -31,22 +31,22 @@ SERIF = ("'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',"
          "'URW Palladio L',Georgia,'Times New Roman',serif")
 
 # aged-ink density ramps (empty -> pale sepia -> oxblood-espresso), per paper
-VELLUM = dict(
-    name="vellum",
-    bg="#D4C9B2", bg2="#C7BB9F", card="#DED5C0", cardTop="#E5DDCA",
-    ink="#33291B", inkStrong="#231A0E", muted="#6A5C48", faint="#928873",
-    border="#352A18", ox="#9A4436", gold="#8F6D30",
-    border_op="0.32", rule_op="0.13", grain_op="0.06",
-    shadow="#231A0E", shadow_op="0.20",
-    empty="#CBBFA6",
-    ramp=["#CBB185", "#BE9450", "#95622C", "#6E3A20"],
+DARK = dict(  # dark-mode: lamplit ledger — ink density glows warm on dark leather
+    name="dark",
+    bg="#1E160C", bg2="#1E160C", card="#251C0F", cardTop="#251C0F",
+    ink="#E7D6AF", inkStrong="#F5EACC", muted="#B29A6E", faint="#87714E",
+    border="#E7D6AF", ox="#D06E4F", gold="#CFA24C",
+    border_op="0.22", rule_op="0.10", grain_op="0.05", grain_col="#E9DBBB",
+    shadow="#000000", shadow_op="0.50",
+    empty="#2B2114",
+    ramp=["#5E4526", "#8A6330", "#BE8B3C", "#E6B457"],
 )
-BOND = dict(
-    name="bond",
+LIGHT = dict(  # light-mode: aged greige ledger — ink density darkens the sheet
+    name="light",
     bg="#E4DBC7", bg2="#D8CEB6", card="#EEE7D6", cardTop="#F4EFE1",
     ink="#352B1B", inkStrong="#251B0C", muted="#6C5E48", faint="#96896B",
     border="#352B1A", ox="#9C4436", gold="#95712F",
-    border_op="0.28", rule_op="0.10", grain_op="0.05",
+    border_op="0.28", rule_op="0.10", grain_op="0.05", grain_col="#2A1B08",
     shadow="#352B1A", shadow_op="0.12",
     empty="#DBD1B8",
     ramp=["#D6C08F", "#C4994F", "#99652D", "#732F22"],
@@ -108,15 +108,15 @@ def build(t, data):
     # defs
     p.append(f'''<defs>
       <clipPath id="cardClip"><rect x="6" y="6" width="{W-12}" height="{H-12}" rx="8"/></clipPath>
-      <linearGradient id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
+      <linearGradient color-interpolation="sRGB" id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
         <stop offset="0" stop-color="{t['bg']}"/><stop offset="1" stop-color="{t['bg2']}"/>
       </linearGradient>
-      <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+      <filter id="grain" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
         <feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.85 0" result="a"/>
-        <feFlood flood-color="#2A1B08" result="c"/><feComposite in="c" in2="a" operator="in"/></filter>
-      <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+        <feFlood flood-color="{t['grain_col']}" result="c"/><feComposite in="c" in2="a" operator="in"/></filter>
+      <filter id="cardShadow" color-interpolation-filters="sRGB" x="-10%" y="-10%" width="120%" height="120%">
         <feDropShadow dx="0" dy="5" stdDeviation="14" flood-color="{t['shadow']}" flood-opacity="{t['shadow_op']}"/></filter>
-      <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <linearGradient color-interpolation="sRGB" id="sheen" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0" stop-color="{t['ox']}" stop-opacity="0"/>
         <stop offset="0.5" stop-color="{t['ox']}" stop-opacity="0.10"/>
         <stop offset="1" stop-color="{t['ox']}" stop-opacity="0"/></linearGradient>
@@ -211,7 +211,7 @@ def build(t, data):
 
 def main():
     data = load()
-    for t in (VELLUM, BOND):
+    for t in (DARK, LIGHT):
         svg = build(t, data)
         fn = os.path.join(HERE, "..", f"heatmap-{t['name']}.svg")
         with open(fn, "w", encoding="utf-8") as f:

@@ -4,39 +4,39 @@
 <clipPath id="cardClip"><rect x="0" y="0" width="1180" height="610" rx="10"/></clipPath>
 <clipPath id="lpClip"><rect x="22" y="22" width="440" height="566" rx="6"/></clipPath>
 <clipPath id="rpClip"><rect x="480" y="22" width="678" height="566" rx="6"/></clipPath>
-<linearGradient id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
+<linearGradient color-interpolation="sRGB" id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
       <stop offset="0" stop-color="#E4DBC7"/>
       <stop offset="1" stop-color="#D8CEB6"/>
     </linearGradient>
-<linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
+<linearGradient color-interpolation="sRGB" id="panelGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#F4EFE1"/>
       <stop offset="1" stop-color="#EEE7D6"/>
     </linearGradient>
-<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+<linearGradient color-interpolation="sRGB" id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#9C4436"/>
       <stop offset="1" stop-color="#95712F"/>
     </linearGradient>
-<radialGradient id="vignette" cx="0.5" cy="0.42" r="0.75">
+<radialGradient color-interpolation="sRGB" id="vignette" cx="0.5" cy="0.42" r="0.75">
       <stop offset="0" stop-color="#D8CEB6" stop-opacity="0"/>
       <stop offset="0.72" stop-color="#D8CEB6" stop-opacity="0"/>
       <stop offset="1" stop-color="#2A1B08" stop-opacity="0.13"/>
     </radialGradient>
-<filter id="grain">
+<filter id="grain" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
       <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.85 0" result="a"/>
       <feFlood flood-color="#2A1B08" result="c"/>
       <feComposite in="c" in2="a" operator="in"/>
     </filter>
-<filter id="fibre">
+<filter id="fibre" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency="0.012 0.16" numOctaves="2" seed="4" stitchTiles="stitch" result="n"/>
       <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0" result="a"/>
       <feFlood flood-color="#3A2B15" result="c"/>
       <feComposite in="c" in2="a" operator="in"/>
     </filter>
-<filter id="panelShadow" x="-20%" y="-20%" width="140%" height="140%">
+<filter id="panelShadow" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#352B1A" flood-opacity="0.12"/>
     </filter>
-<filter id="inkBleed" x="-20%" y="-20%" width="140%" height="140%">
+<filter id="inkBleed" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="0.6" result="b"/>
       <feFlood flood-color="#352B1B" flood-opacity="0.5" result="c"/>
       <feComposite in="c" in2="b" operator="in" result="g"/>
@@ -129,6 +129,7 @@
 <rect x="52" y="152" width="380" height="2" rx="1" fill="#9C4436" opacity="0"><animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.85;1" dur="2.6s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 0; 0 290" dur="2.6s" fill="freeze"/></rect>
 <text x="46" y="558" font-family="'JetBrains Mono','Courier New','SFMono-Regular',ui-monospace,'Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#6C5E48" opacity="0"><tspan fill="#9C4436">plate</tspan> <tspan fill="#6C5E48">❯ etch --self</tspan><animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.7s" fill="freeze"/></text>
 <rect x="208" y="547" width="8" height="14" rx="1" fill="#9C4436" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.1s" begin="3s" fill="freeze"/><animate attributeName="opacity" values="1;0" dur="1.1s" begin="3.1s" calcMode="discrete" repeatCount="indefinite"/></rect>
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.6s" begin="3.3s" fill="freeze"/><circle cx="408" cy="538" r="22" fill="none" stroke="#9C4436" stroke-width="1.4" opacity="0.75"/><circle cx="408" cy="538" r="17.5" fill="none" stroke="#95712F" stroke-width="0.8" opacity="0.7"/><text x="408" y="544.5" text-anchor="middle" font-family="'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','URW Palladio L',Georgia,'Times New Roman',serif" font-size="17" font-weight="700" letter-spacing="0.5" fill="#352B1B" opacity="0.9">AH</text><text x="408" y="526.5" text-anchor="middle" font-family="'JetBrains Mono','Courier New','SFMono-Regular',ui-monospace,'Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace" font-size="4.6" letter-spacing="1.4" fill="#6C5E48">· EST · ALGIERS ·</text></g>
 </g>
 <g filter="url(#panelShadow)"><rect x="480" y="22" width="678" height="566" rx="6" fill="url(#panelGrad)"/></g>
 <g clip-path="url(#rpClip)"><rect x="480" y="22" width="678" height="566" filter="url(#grain)" opacity="0.030"/></g>

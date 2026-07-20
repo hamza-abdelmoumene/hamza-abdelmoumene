@@ -84,22 +84,25 @@ ASCII = [
 # ----------------------------------------------------------------------------
 # Palettes -- two sheets of the same aged stock
 # ----------------------------------------------------------------------------
-VELLUM = dict(  # dark-mode viewers: warm aged greige (de-yellowed, dimmed)
-    name="vellum",
-    bg="#D4C9B2", bg2="#C7BB9F",
-    panel="#DED5C0", panelTop="#E5DDCA", titlebar="#D6CBB3",
-    ink="#33291B", inkStrong="#231A0E", muted="#6A5C48", faint="#928873",
-    border="#352A18", hi="#EEE8D9",
-    ox="#9A4436", teal="#3F6656", gold="#8F6D30",
-    dotR="#9F5340", dotY="#A9873F", dotG="#5E7856",
-    border_op="0.20", border2_op="0.36",
-    grain_op="0.07", vignette_op="0.20",
-    shadow="#231A0E", shadow_op="0.20", shadow_blur="18",
-    pill="#E5DDCA", pill_op="0.72",
-    rule_op="0.11",
+DARK = dict(  # dark-mode viewers: aged dark ledger — lamplit leather, cream ink
+    name="dark",
+    # flat warm surfaces (no gradient): rsvg interpolates gradients in linearRGB,
+    # which greens very-dark warm midtones. Grain + vignette carry the depth.
+    bg="#1E160C", bg2="#1E160C",
+    panel="#251C0F", panelTop="#251C0F", titlebar="#1C1509",
+    ink="#E7D6AF", inkStrong="#F5EACC", muted="#B29A6E", faint="#87714E",
+    border="#E7D6AF", hi="#0E0A05",
+    ox="#D06E4F", teal="#6BA88F", gold="#CFA24C",
+    dotR="#C8664F", dotY="#CBA24C", dotG="#7FA36B",
+    border_op="0.14", border2_op="0.24",
+    grain_op="0.05", vignette_op="0.30",
+    grain_col="#E9DBBB", fibre_col="#C7B487", vign_col="#000000",
+    shadow="#000000", shadow_op="0.50", shadow_blur="22",
+    pill="#2C2113", pill_op="0.70",
+    rule_op="0.10",
 )
-BOND = dict(  # light-mode viewers: light putty (still muted, not bright cream)
-    name="bond",
+LIGHT = dict(  # light-mode viewers: aged greige paper (muted, de-yellowed)
+    name="light",
     bg="#E4DBC7", bg2="#D8CEB6",
     panel="#EEE7D6", panelTop="#F4EFE1", titlebar="#E5DDCB",
     ink="#352B1B", inkStrong="#251B0C", muted="#6C5E48", faint="#96896B",
@@ -108,6 +111,7 @@ BOND = dict(  # light-mode viewers: light putty (still muted, not bright cream)
     dotR="#A5573F", dotY="#B08A40", dotG="#617A55",
     border_op="0.16", border2_op="0.30",
     grain_op="0.05", vignette_op="0.13",
+    grain_col="#2A1B08", fibre_col="#3A2B15", vign_col="#2A1B08",
     shadow="#352B1A", shadow_op="0.12", shadow_blur="16",
     pill="#F1EBDC", pill_op="0.85",
     rule_op="0.09",
@@ -142,53 +146,53 @@ def defs(t):
     p.append(f'<clipPath id="rpClip"><rect x="{RP_X}" y="{RP_Y}" width="{RP_W}" height="{RP_H}" rx="6"/></clipPath>')
 
     # -- paper base gradient (subtle warm gradient across the sheet) --
-    p.append(f'''<linearGradient id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
+    p.append(f'''<linearGradient color-interpolation="sRGB" id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
       <stop offset="0" stop-color="{t['bg']}"/>
       <stop offset="1" stop-color="{t['bg2']}"/>
     </linearGradient>''')
 
     # -- inset card (laid-paper) gradient --
-    p.append(f'''<linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
+    p.append(f'''<linearGradient color-interpolation="sRGB" id="panelGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="{t['panelTop']}"/>
       <stop offset="1" stop-color="{t['panel']}"/>
     </linearGradient>''')
 
     # -- accent (aged inks): oxblood -> antique gold. static, muted. --
-    p.append(f'''<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    p.append(f'''<linearGradient color-interpolation="sRGB" id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="{t['ox']}"/>
       <stop offset="1" stop-color="{t['gold']}"/>
     </linearGradient>''')
 
-    # -- edge vignette: transparent centre -> warm-dark corners (ages the sheet) --
-    p.append(f'''<radialGradient id="vignette" cx="0.5" cy="0.42" r="0.75">
+    # -- edge vignette: transparent centre -> darker corners (ages the sheet) --
+    p.append(f'''<radialGradient color-interpolation="sRGB" id="vignette" cx="0.5" cy="0.42" r="0.75">
       <stop offset="0" stop-color="{t['bg2']}" stop-opacity="0"/>
       <stop offset="0.72" stop-color="{t['bg2']}" stop-opacity="0"/>
-      <stop offset="1" stop-color="#2A1B08" stop-opacity="{t['vignette_op']}"/>
+      <stop offset="1" stop-color="{t['vign_col']}" stop-opacity="{t['vignette_op']}"/>
     </radialGradient>''')
 
-    # -- paper grain: dark specks with noise-driven alpha, tinted warm --
-    p.append(f'''<filter id="grain">
+    # -- paper grain: specks with noise-driven alpha (dark on paper, light on leather) --
+    p.append(f'''<filter id="grain" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
       <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.85 0" result="a"/>
-      <feFlood flood-color="#2A1B08" result="c"/>
+      <feFlood flood-color="{t['grain_col']}" result="c"/>
       <feComposite in="c" in2="a" operator="in"/>
     </filter>''')
 
     # -- fibrous long grain (very low freq, gives the sheet a "laid" texture) --
-    p.append(f'''<filter id="fibre">
+    p.append(f'''<filter id="fibre" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency="0.012 0.16" numOctaves="2" seed="4" stitchTiles="stitch" result="n"/>
       <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0" result="a"/>
-      <feFlood flood-color="#3A2B15" result="c"/>
+      <feFlood flood-color="{t['fibre_col']}" result="c"/>
       <feComposite in="c" in2="a" operator="in"/>
     </filter>''')
 
     # -- warm paper drop shadow for the inset cards --
-    p.append(f'''<filter id="panelShadow" x="-20%" y="-20%" width="140%" height="140%">
+    p.append(f'''<filter id="panelShadow" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="6" stdDeviation="{t['shadow_blur']}" flood-color="{t['shadow']}" flood-opacity="{t['shadow_op']}"/>
     </filter>''')
 
     # -- ink bleed: a whisper of spread so glyphs read as pressed into fibre --
-    p.append(f'''<filter id="inkBleed" x="-20%" y="-20%" width="140%" height="140%">
+    p.append(f'''<filter id="inkBleed" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="0.6" result="b"/>
       <feFlood flood-color="{t['ink']}" flood-opacity="0.5" result="c"/>
       <feComposite in="c" in2="b" operator="in" result="g"/>
@@ -319,6 +323,19 @@ def left_panel(t):
              f'{anim(attributeName="opacity", values="0;1", dur="0.1s", begin="3s", fill="freeze")}'
              f'{anim(attributeName="opacity", values="1;0", dur="1.1s", begin="3.1s", calcMode="discrete", repeatCount="indefinite")}'
              f'</rect>')
+
+    # monogram seal (personal letterhead stamp), lower-right of the plate
+    sx, sy = LP_X + LP_W - 54, LP_Y + LP_H - 50
+    g.append(
+        f'<g opacity="0">'
+        f'{anim(attributeName="opacity", values="0;1", dur="0.6s", begin="3.3s", fill="freeze")}'
+        f'<circle cx="{sx}" cy="{sy}" r="22" fill="none" stroke="{t["ox"]}" stroke-width="1.4" opacity="0.75"/>'
+        f'<circle cx="{sx}" cy="{sy}" r="17.5" fill="none" stroke="{t["gold"]}" stroke-width="0.8" opacity="0.7"/>'
+        f'<text x="{sx}" y="{sy+6.5}" text-anchor="middle" font-family="{SERIF}" font-size="17" '
+        f'font-weight="700" letter-spacing="0.5" fill="{t["ink"]}" opacity="0.9">AH</text>'
+        f'<text x="{sx}" y="{sy-11.5}" text-anchor="middle" font-family="{MONO}" font-size="4.6" '
+        f'letter-spacing="1.4" fill="{t["muted"]}">· EST · ALGIERS ·</text>'
+        f'</g>')
 
     g.append('</g>')  # lpClip
     return "\n".join(g)
@@ -597,7 +614,7 @@ def build(t):
 
 
 if __name__ == "__main__":
-    for theme in (VELLUM, BOND):
+    for theme in (DARK, LIGHT):
         svg = build(theme)
         if STATIC:
             svg = svg.replace(' opacity="0"', ' opacity="1"')
