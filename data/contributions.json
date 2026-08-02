@@ -1,17 +1,16 @@
 {
- "generated": "2026-08-01",
+ "generated": "2026-08-02",
  "username": "hamza-abdelmoumene",
- "total_last_year": 201,
- "current_streak": 14,
+ "total_last_year": 202,
+ "current_streak": 15,
  "longest_streak": 16,
- "active_days": 46,
+ "active_days": 47,
  "best_day": {
   "date": "2026-06-19",
   "count": 24
  },
  "counts_known": true,
  "months": {
-  "2025-07": 0,
   "2025-08": 0,
   "2025-09": 0,
   "2025-10": 0,
@@ -24,44 +23,9 @@
   "2026-05": 2,
   "2026-06": 78,
   "2026-07": 109,
-  "2026-08": 0
+  "2026-08": 1
  },
  "days": [
-  {
-   "date": "2025-07-27",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-07-28",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-07-29",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-07-30",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-07-31",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-08-01",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-08-02",
-   "level": 0,
-   "count": 0
-  },
   {
    "date": "2025-08-03",
    "level": 0,
@@ -1879,6 +1843,11 @@
   },
   {
    "date": "2026-08-01",
+   "level": 1,
+   "count": 1
+  },
+  {
+   "date": "2026-08-02",
    "level": 0,
    "count": 0
   }
