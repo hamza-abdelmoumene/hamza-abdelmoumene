@@ -1,10 +1,10 @@
 {
- "generated": "2026-08-27",
+ "generated": "2026-08-28",
  "username": "hamza-abdelmoumene",
- "total_last_year": 227,
- "current_streak": 40,
- "longest_streak": 40,
- "active_days": 72,
+ "total_last_year": 228,
+ "current_streak": 41,
+ "longest_streak": 41,
+ "active_days": 73,
  "best_day": {
   "date": "2026-06-19",
   "count": 24
@@ -23,7 +23,7 @@
   "2026-05": 2,
   "2026-06": 78,
   "2026-07": 109,
-  "2026-08": 26
+  "2026-08": 27
  },
  "days": [
   {
@@ -1868,6 +1868,11 @@
   },
   {
    "date": "2026-08-27",
+   "level": 1,
+   "count": 1
+  },
+  {
+   "date": "2026-08-28",
    "level": 0,
    "count": 0
   }
