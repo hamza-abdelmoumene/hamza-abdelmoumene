@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-13",
+ "generated": "2026-09-14",
  "username": "hamza-abdelmoumene",
- "total_last_year": 244,
- "current_streak": 57,
- "longest_streak": 57,
- "active_days": 89,
+ "total_last_year": 275,
+ "current_streak": 58,
+ "longest_streak": 58,
+ "active_days": 90,
  "best_day": {
   "date": "2026-06-19",
   "count": 24
@@ -23,7 +23,7 @@
   "2026-06": 78,
   "2026-07": 109,
   "2026-08": 31,
-  "2026-09": 12
+  "2026-09": 43
  },
  "days": [
   {
@@ -1423,7 +1423,7 @@
   },
   {
    "date": "2026-06-20",
-   "level": 3,
+   "level": 2,
    "count": 7
   },
   {
@@ -1458,7 +1458,7 @@
   },
   {
    "date": "2026-06-27",
-   "level": 4,
+   "level": 3,
    "count": 10
   },
   {
@@ -1478,7 +1478,7 @@
   },
   {
    "date": "2026-07-01",
-   "level": 3,
+   "level": 2,
    "count": 7
   },
   {
@@ -1533,7 +1533,7 @@
   },
   {
    "date": "2026-07-12",
-   "level": 4,
+   "level": 3,
    "count": 11
   },
   {
@@ -1578,7 +1578,7 @@
   },
   {
    "date": "2026-07-21",
-   "level": 4,
+   "level": 3,
    "count": 10
   },
   {
@@ -1833,21 +1833,26 @@
   },
   {
    "date": "2026-09-10",
-   "level": 1,
-   "count": 1
+   "level": 2,
+   "count": 5
   },
   {
    "date": "2026-09-11",
-   "level": 1,
-   "count": 1
+   "level": 4,
+   "count": 15
   },
   {
    "date": "2026-09-12",
-   "level": 1,
-   "count": 1
+   "level": 3,
+   "count": 8
   },
   {
    "date": "2026-09-13",
+   "level": 2,
+   "count": 6
+  },
+  {
+   "date": "2026-09-14",
    "level": 0,
    "count": 0
   }
