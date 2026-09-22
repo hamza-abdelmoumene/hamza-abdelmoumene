@@ -5,10 +5,22 @@
   <img alt="Hamza Ayoub Abdelmoumene — Computer Science student, ESI Algiers" src="header-light.svg" width="100%">
 </picture>
 
-I'm a second-year student in the preparatory cycle at the
-[École nationale Supérieure d'Informatique (ESI)](https://www.esi.dz/) in Algiers.
-Outside coursework I build and maintain open-source tools for Linux, and I'm working
-towards machine learning and data science.
+I'm a second-year computer science student at the
+[École nationale Supérieure d'Informatique (ESI)](https://www.esi.dz/) in Algiers, working
+towards AI engineering: machine learning, backend systems and deployment. Outside
+coursework I build and maintain open-source tools for Linux.
+
+## Education
+
+**ESI Algiers**, Ingénieur d'État en informatique (state engineering degree in computer science), 2025–present
+- Preparatory cycle, English-medium programme; now in the second year (2CP).
+- 2CP coursework: computer architecture, file structures and external data structures,
+  object-oriented programming (Java), linear algebra, probability and statistics,
+  series and multivariable analysis, databases, information systems, mathematical logic,
+  graph algorithms and linear optimisation.
+
+**GCI World 2026**, University of Tokyo, Matsuo–Iwasawa Lab
+- Data science and machine learning programme, September 2026 cohort.
 
 ## Projects
 
@@ -21,14 +33,15 @@ towards machine learning and data science.
 
 ## Currently
 
-- Second year of the preparatory cycle at ESI: mathematics, algorithms and computer systems.
-- Learning machine learning with NumPy, pandas, scikit-learn and PyTorch.
+- Following the GCI World 2026 programme alongside 2CP.
+- Working through *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) and
+  practising data analysis with pandas and scikit-learn.
 - Maintaining vespera and lyrics-tool on the AUR and PyPI.
 
 ## Tools
 
-**Languages:** Python, C, C++, QML, Bash, SQL<br>
-**Data and ML:** NumPy, pandas, scikit-learn, PyTorch, Matplotlib, Jupyter<br>
+**Languages:** Python, C, C++, Java, QML, Bash, SQL<br>
+**Data and ML:** NumPy, pandas, scikit-learn, Matplotlib, Jupyter<br>
 **Environment:** Arch Linux, Git, Qt 6, CMake, GitHub Actions
 
 ## Contact
