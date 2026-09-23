@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="170" viewBox="0 0 490 170" role="img" aria-labelledby="t">
+  <title id="t">lyrics-tool: Terminal live-lyrics visualiser and LRC/WLRC processing suite built on playerctl and LRCLIB, with tagged, automated releases.</title>
+  <rect x="0.5" y="0.5" width="489" height="169" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="24" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="19" font-weight="600" fill="#0969da">lyrics-tool</text>
+  <text x="24" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" fill="#59636e">Terminal live-lyrics visualiser and LRC/WLRC processing suite</text>
+  <text x="24" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" fill="#59636e">built on playerctl and LRCLIB, with tagged, automated releases.</text>
+  <circle cx="30" cy="139.5" r="5.5" fill="#3572A5"/>
+  <text x="44" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#1f2328">Python</text>
+  <rect x="270" y="125" width="200" height="26" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="370.0" y="142.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#1f2328">pipx install lyrics-tool</text>
+</svg>
